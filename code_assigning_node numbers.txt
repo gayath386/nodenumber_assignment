@@ -1,0 +1,17 @@
+# Assign the source nodes to variable Data_1 and destination nodes to Data_2
+
+Data_1= [[1,10],[8,10],[10,8],[2,5],[4,6],[7,4],[3,1],[5,12]]
+Data_2= [[8,10],[10,8],[7,4],[7,4],[3,1],[5,12],[7,4],[4,6]]
+
+#Automatic assignment of node numbers for nodes in Data_1 (no sorting is used) to form n1
+n1 = [ind1 for ind1 in range(len(Data_1))]
+
+# Finding the node numbers of the nodes in Data_2 corresponding to those in Data_1
+indices = []
+for value in Data_2:
+    if value in Data_1:
+      this_indices = Data_1.index(value)
+      indices.append(this_indices)
+
+#Assigning value of indices to form n2
+ n2=indices
